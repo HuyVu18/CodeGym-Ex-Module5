@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const divReact = React.createElement(
+        "div",
+        {
+          className: "post-item",
+        },
+        React.createElement("h2", { title: "Học React tại f8" }, "Học ReactJS"),
+        React.createElement("p", null, "Học React từ cơ bản đến nâng cao")
+      );
+
+      console.log(divReact);
+
+      // Get root element
+      const root = document.getElementById("root");
+
+      // React-DOM render
+      // ReactDOM.render(divReact, root);
+
+      const ulReact = React.createElement(
+        "ul",
+        {
+          id: "ul-id",
+        },
+        React.createElement("li", null, "Javascript"),
+        React.createElement("li", null, "ReactJS")
+      );
+
+      console.log(ulReact);
+      ReactDOM.render(ulReact, root);
+    </script>
+  </body>
+</html>

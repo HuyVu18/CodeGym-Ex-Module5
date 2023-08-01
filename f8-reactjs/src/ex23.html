@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // PostItem.js
+      function PostItem(props) {
+        return (
+          <div className="post-item">
+            <img src={props.image} />
+            <h2 className="post-title">{props.title}</h2>
+            <p className="post-desc">{props.description}</p>
+            <p className="post-published">{props.published}</p>
+          </div>
+        );
+      }
+
+      // App.js
+      function App() {
+        return (
+          <div id="wrapper">
+            <PostItem 
+                image="https://www.coderschmoder.com/wp-content/uploads/2023/01/csharp-2023-1.png"
+                title="1. C#(.NET)"
+                description="1. Ngôn ngữ C#"
+                published="1. 10 phút học mỗi ngày"
+            />
+            <PostItem 
+                image="https://www.coderschmoder.com/wp-content/uploads/2023/01/csharp-2023-1.png"
+                title="2. C#(.NET)"
+                description="2. Ngôn ngữ C#"
+                published="2. 10 phút học mỗi ngày"
+            />
+            <PostItem 
+                image="https://www.coderschmoder.com/wp-content/uploads/2023/01/csharp-2023-1.png"
+                title="3. C#(.NET)"
+                description="3. Ngôn ngữ C#"
+                published="3. 10 phút học mỗi ngày"
+            />
+          </div>
+        );
+      }
+
+      // Index.js
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
